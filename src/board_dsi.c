@@ -129,7 +129,7 @@ void board_init(void)
 	i2c_init();
 
 	/* =========== MMA8451 ================ */
-	mma8451_init();
+	//mma8451_init();
 }
 
 void board_setLed(board_ledId_enum id, board_ledMsg_enum msg)
