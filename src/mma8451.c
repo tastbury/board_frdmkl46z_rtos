@@ -303,11 +303,11 @@ void mma8451_init(void)
     /* verificación */
     ctrl_reg1.data = mma8451_read_reg(CTRL_REG1_ADDRESS);
 
-    config_port_int1();
-
     xSemINTAcc = xSemaphoreCreateBinary();
 
     xSemaphoreTake(xSemINTAcc, 0);
+
+    config_port_int1();
 
     xTaskCreate(taskAcc, "acc", 200, NULL, 1, NULL);
 }
