@@ -148,6 +148,10 @@ void board_setLed(board_ledId_enum id, board_ledMsg_enum msg)
         	GPIO_PortToggle(board_gpioLeds[id].gpio, 1<<board_gpioLeds[id].pin);
             break;
 
+        case BOARD_LED_MSG_BLINK:
+        	// completar
+        	break;
+
         default:
             break;
     }
